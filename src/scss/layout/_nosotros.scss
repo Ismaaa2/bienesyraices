@@ -1,0 +1,47 @@
+.nosotros {
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: $separacion / 3;
+    }
+}
+
+.nosotros-imagen-flex {
+    display: flex;
+    justify-content: flex-end;
+
+    .nosotros-imagen {
+        width: 100%;
+        @include tablet{
+            width: 80%;
+        }
+    }
+}
+
+
+.nosotros-texto {
+    width: 85%;
+
+    h3{
+        font-size: 1.8rem;
+        font-weight: $black;
+        text-align: left;
+        margin: 0;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        padding: 0;
+
+        @include tablet {
+            margin-top: 0rem;
+        }
+    }
+
+    p{
+        margin: 0;
+        font-size: 1.6rem;
+
+        &:first-of-type{
+            margin-bottom: 2rem;
+        }
+    }
+}
